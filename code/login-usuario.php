@@ -6,7 +6,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Fest.On</title>
-		<link rel="icon" type="image/gif/png" href="_imagens/favicon-feston.png">
+		<link rel="icon" type="image/gif/png" href="../assets/_imagens/favicon-feston.png">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -82,7 +82,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <img src="_imagens/logo_feston_menu.png" alt="logo" width="140" height="110">   
+                    <img src="../assets/_imagens/logo_feston_menu.png" alt="logo" width="140" height="110">   
                 </div>
                 <div class="collapse navbar-collapse" id="barra-navegacao">
                     <ul class="nav navbar-nav navbar-right">

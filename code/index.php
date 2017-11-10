@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Fest.On</title>
-		<link rel="icon" type="image/gif/png" href="_imagens/favicon-feston.png">
+		<link rel="icon" type="image/gif/png" href="../assets/_imagens/favicon-feston.png">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,7 +55,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <img src="_imagens/logo_feston_menu.png" alt="logo" width="140" height="110">   
+                    <img src="../assets/_imagens/logo_feston_menu.png" alt="logo" width="140" height="110">   
                 </div>
                 <div class="collapse navbar-collapse" id="barra-navegacao">
                     <ul class="nav navbar-nav navbar-right">
@@ -94,7 +94,7 @@
 			    <!-- Wrapper for slides -->
 			    <div class="carousel-inner">
 			      	<div class="item active">
-				        <img src="_imagens/la.jpg" alt="Los Angeles" style="width:100%;">
+				        <img src="../assets/_imagens/la.jpg" alt="Los Angeles" style="width:100%;">
 				        <div class="carousel-caption">
 				          	<h1>O que é</h1>
 				          	<p class="texto_carrosel">
@@ -104,7 +104,7 @@
 			      	</div>
 
 				    <div class="item">
-				        <img src="_imagens/chicago.jpg" alt="Chicago" style="width:100%;">
+				        <img src="../assets/_imagens/chicago.jpg" alt="Chicago" style="width:100%;">
 				        <div class="carousel-caption">
 				          	<h1>Como comprar ingressos</h1>
 				          	<p class="texto_carrosel">
@@ -114,7 +114,7 @@
 				    </div>
 			    
 			      	<div class="item">
-				        <img src="_imagens/ny.jpg" alt="New York" style="width:100%;">
+				        <img src="../assets/_imagens/ny.jpg" alt="New York" style="width:100%;">
 				        <div class="carousel-caption">
 				          	<h1>Como cadastrar eventos</h1>
 				          	<p class="texto_carrosel">
@@ -124,7 +124,7 @@
 			      	</div>
 
 			      	<div class="item">
-				        <img src="_imagens/ny.jpg" alt="New York" style="width:100%;">
+				        <img src="../assets/_imagens/ny.jpg" alt="New York" style="width:100%;">
 				        <div class="carousel-caption">
 				          	<h1>Comprei o ingresso, e agora?</h1>
 				          	<p class="texto_carrosel">

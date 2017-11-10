@@ -15,7 +15,7 @@
     <head>
         <meta charset="utf-8">
         <title>Fest.On</title>
-        <link rel="icon" type="image/gif/png" href="_imagens/favicon-feston.png">
+        <link rel="icon" type="image/gif/png" href="../assets/_imagens/favicon-feston.png">
         <!--<link rel="stylesheet" href="_css/estilo.css"/>-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
