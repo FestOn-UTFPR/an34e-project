@@ -45,6 +45,9 @@
             .a{
                 color: red;
             }
+            .comment-event{
+                resize: none;
+            }
         </style>
     </head>
     <body>
@@ -97,7 +100,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="">Atrações do eventos<a class="a">*</a></label>
-                            <textarea class="form-control" rows="5" id="comment" name="atracoes_evento" placeholder="Comente as atrações do evento ex: ColdPlay e Mc Livinho"></textarea>
+                            <textarea class="form-control comment-event" rows="5" id="comment" name="atracoes_evento" placeholder="Comente as atrações do evento ex: ColdPlay e Mc Livinho"></textarea>
                         </div>
                     </div>  
 
