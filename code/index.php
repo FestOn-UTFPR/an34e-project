@@ -42,6 +42,33 @@
             #rodape{
             	text-align: center;
             }
+
+            @media screen and (max-width: 768px){
+            	.texto_carrosel{
+            		font-size: 15px;
+            	}
+            	.carousel-caption h1{
+            		font-size: 27px;
+            	}
+            }
+
+            @media screen and (max-width: 420px){
+            	.texto_carrosel{
+            		font-size: 7px;
+            	}
+            	.carousel-caption h1{
+            		font-size: 14px;
+            	}
+            }
+
+            @media screen and (max-width: 320px){
+            	.texto_carrosel{
+            		font-size: 6px;
+            	}
+            	.carousel-caption h1{
+            		font-size: 12px;
+            	}
+            }
 		</style>
 		<script src="_javascript/funcoes.js"></script>
 	</head>
