@@ -8,8 +8,6 @@ CREATE TABLE IF NOT EXISTS `pais` (
 INSERT INTO `pais` (`id`, `nome`, `sigla`) VALUES (1, 'Brasil', 'BR');
 
 
-Renan Cleverson Laureano  Flor da Rosa;Lucas Fuzeto;
-
 CREATE TABLE IF NOT EXISTS `estado` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(75) DEFAULT NULL,
@@ -48,13 +46,6 @@ INSERT INTO `estado` (`id`, `nome`, `uf`, `pais`) VALUES
 (25, 'Sergipe', 'SE', 1),
 (26, 'São Paulo', 'SP', 1),
 (27, 'Tocantins', 'TO', 1);
-(28, 'Cidade do Renan', 'RL', 1);
-
-
-
-
-
-
 
 
 CREATE TABLE IF NOT EXISTS `cidade` (
