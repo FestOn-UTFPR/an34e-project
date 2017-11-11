@@ -46,7 +46,7 @@ INSERT INTO `estado` (`id`, `nome`, `uf`, `pais`) VALUES
 (25, 'Sergipe', 'SE', 1),
 (26, 'São Paulo', 'SP', 1),
 (27, 'Tocantins', 'TO', 1);
-
+Renan Cleverson Laureano  Flor da Rosa
 
 CREATE TABLE IF NOT EXISTS `cidade` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
