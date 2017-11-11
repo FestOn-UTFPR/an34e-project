@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS `pais` (
 INSERT INTO `pais` (`id`, `nome`, `sigla`) VALUES (1, 'Brasil', 'BR');
 
 
-Renan Cleverson Laureano  Flor da Rosa;
+Renan Cleverson Laureano  Flor da Rosa;Lucas Fuzeto;
 
 CREATE TABLE IF NOT EXISTS `estado` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
