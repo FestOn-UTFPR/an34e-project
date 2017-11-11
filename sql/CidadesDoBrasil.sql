@@ -46,6 +46,7 @@ INSERT INTO `estado` (`id`, `nome`, `uf`, `pais`) VALUES
 (25, 'Sergipe', 'SE', 1),
 (26, 'São Paulo', 'SP', 1),
 (27, 'Tocantins', 'TO', 1);
+(28, 'Cidade do Renan', 'RL', 1);
 
 
 
