@@ -8,6 +8,8 @@ CREATE TABLE IF NOT EXISTS `pais` (
 INSERT INTO `pais` (`id`, `nome`, `sigla`) VALUES (1, 'Brasil', 'BR');
 
 
+apsokdaposkdapsodk;
+
 CREATE TABLE IF NOT EXISTS `estado` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(75) DEFAULT NULL,
