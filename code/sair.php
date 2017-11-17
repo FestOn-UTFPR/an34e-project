@@ -18,42 +18,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-        <style type="text/css">
-           .a{
-                color: red;
-            }
-
-            div#texto{
-                text-align: justify;
-                padding: 10px;
-                font-size: 13pt;
-            }
-            .panel-heading{
-                font-size: 13pt;
-            }
-            /*ul{
-                text-align: center;
-                padding: 0px 280px 0px 280px;
-            }*/
-
-            header#cabecalho{
-                padding: 0px 280px 0px 280px;
-            }
-            img {
-                max-width: 100%;
-                height: auto;
-                display: block;
-                margin: auto;
-            }
-
-            .sucesso{
-                text-align: justify;
-            }
-
-            #rodape{
-                text-align: center;
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="_css/css.css">
     </head>
     <body>
         <nav class="navbar navbar-inverse bg-inverse">

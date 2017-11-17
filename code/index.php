@@ -10,39 +10,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+        <link rel="stylesheet" type="text/css" href="_css/css.css">
+
 		<style>
-			div#texto{
-                text-align: justify;
-                padding: 10px;
-                font-size: 13pt;
-            }
-            .panel-heading{
-                font-size: 13pt;
-            }
-            /*ul{
-                text-align: center;
-                padding: 0px 280px 0px 280px;
-            }*/
-
-            header#cabecalho{
-                padding: 0px 280px 0px 280px;
-            }
-            img {
-                max-width: 100%;
-                height: auto;
-                display: block;
-                margin: auto;
-            }
-
-            .texto_carrosel{
-            	text-align: justify;
-            	font-size: 20px;
-            }
-
-            #rodape{
-            	text-align: center;
-            }
-
             @media screen and (max-width: 768px){
             	.texto_carrosel{
             		font-size: 15px;

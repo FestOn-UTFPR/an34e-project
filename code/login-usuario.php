@@ -40,37 +40,8 @@
 					});	
 				});
 		</script>
-		<style type="text/css">
-			.linha{
-				border: 1px solid gray;
-			}
-			div#texto{
-                text-align: justify;
-                padding: 10px;
-                font-size: 13pt;
-            }
-            .panel-heading{
-                font-size: 13pt;
-            }
-            /*ul{
-                text-align: center;
-                padding: 0px 280px 0px 280px;
-            }*/
-
-            header#cabecalho{
-                padding: 0px 280px 0px 280px;
-            }
-            img {
-                max-width: 100%;
-                height: auto;
-                display: block;
-                margin: auto;
-            }
-            #rodape{
-            	text-align: center;
-            }
-
-		</style>
+		
+		<link rel="stylesheet" type="text/css" href="_css/css.css">
 	</head>
 	<body>
 		<nav class="navbar navbar-inverse bg-inverse">
