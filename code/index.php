@@ -13,6 +13,11 @@
         <link rel="stylesheet" type="text/css" href="_css/css.css">
 		<link rel="stylesheet" type="text/css" href="_css/css_media.css">
 		<script src="_javascript/funcoes.js"></script>
+		<style type="text/css">
+			.texto_carrosel{
+				text-align: justify;
+			}
+		</style>
 	</head>
 	<body>	
 		<nav class="navbar navbar-inverse bg-inverse">
