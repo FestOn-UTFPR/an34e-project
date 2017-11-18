@@ -72,7 +72,7 @@
 				        <div class="carousel-caption">
 				          	<h1>O que é</h1>
 				          	<p class="texto_carrosel">
-				          		O Fest.On é um aplicativo de cadastro de eventos e venda de ingressos, (com ele é possível comprar ingressos eventos e sua carga de ingressos, local, data, horário, entre outras diversas informações.(retificar))
+				          		O Fest.On é um aplicativo de cadastro de eventos e venda de ingressos, (com ele é possível comprar ingressos eventos e sua carga de ingressos, local, data, horário, entre outras diversas informações.
 				          	</p>
 				        </div>
 			      	</div>
