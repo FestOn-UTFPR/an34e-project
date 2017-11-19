@@ -25,3 +25,17 @@ img {
 .comment-event{
     resize: none;
 }
+
+.nav-feston{
+    border-radius: 0;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    top: 0;
+    border: none;
+    background: rgba(34,34,34,0.98);
+}
+
+.container-corpo{
+    margin-top: 74px;
+}

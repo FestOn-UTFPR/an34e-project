@@ -18,46 +18,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="_javascript/init-config.js"></script>
 
         <link rel="stylesheet" type="text/css" href="_css/css.css">
     </head>
     <body>
-        <nav class="navbar navbar-inverse bg-inverse">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barra-navegacao" >
-                        <span class="sr-only">Alternar Menu</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <img src="../assets/_imagens/logo_feston_menu.png" alt="logo" width="140" height="110">   
-                </div>
-                <div class="collapse navbar-collapse" id="barra-navegacao">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="quem-somos.php">Quem somos</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Eventos<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="cadastrar-eventos.php">Cadastrar Evento</a></li>
-                                <li><a href="#">Buscar Evento</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Minha Conta <span class="glyphicon">&#xe008;</span><span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="login-usuario.php">Login</a></li>
-                                <li><a href="cadastro-usuario.php">Cadastre-se</a></li>
-                                <li><a href="sair.php">Log-out</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>     
-            </div>
+        <nav class="navbar navbar-inverse bg-inverse nav-feston">
+           <div id="header"></div>
         </nav>
     	
-        <div class="container">
+        <div class="container container-corpo">
             <div class="col-md-3"></div>
             <div class="col-md-6">
                 <form method="post" action="registra_usuario.php" id="formCadastroUsuario">
@@ -173,12 +143,7 @@
             <div class="col-md-3"></div>                   
         </div>
     	<footer id="rodape">
-            <br>
-    		<p>
-    			Copyright &copy; 2017 - by Fest.On Company
-                <br>
-    			<a href="https://www.facebook.com/" target="_blank">Facebook</a> | <a href="https://www.instagram.com/" target="_blank">Instagram</a> | <a href="https://www.youtube.com/" target="_blank">Youtube</a> | <a href="https://twitter.com/" target="_blank">Twitter</a>
-    		</p>
+            <div id="footer"></div>
     	</footer>
         <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     </body>
