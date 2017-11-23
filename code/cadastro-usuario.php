@@ -1,11 +1,9 @@
 <?php
     $erro_username = isset($_GET['erro_username']) ? $_GET['erro_username'] : 0;
     $erro_email = isset($_GET['erro_email']) ? $_GET['erro_email'] : 0;
-    /*
     $erro_pais = isset($_GET['erro_pais']) ? $_GET['erro_pais'] : 0;
     $erro_estado = isset($_GET['erro_estado']) ? $_GET['erro_estado'] : 0;
     $erro_cidade = isset($_GET['erro_cidade']) ? $_GET['erro_cidade'] : 0;
-    */
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -81,11 +79,11 @@
                         <div class="form-group">
                             <label for="">Digite seu país<a class="a">*</a></label>
                             <input type="text" id="combo-estado" class="form-control" name="pais" required="requiored">
-                            <!--<?php
-                                /*if($erro_pais){
-                                    echo '<font color="#FF0000">O país digitado não existe ou foi digitado incorretamente</font>';
-                                }*/
-                            ?>-->
+                            <?php
+                                if($erro_pais){
+                                    echo '<font color="#FF0000">O nome do país digitado digitado incorretamente</font>';
+                                }
+                            ?>
                         </div>
                     </div>
 
@@ -93,11 +91,11 @@
                         <div class="form-group">
                             <label for="">Digite seu estado<a class="a">*</a></label>
                             <input type="text" class="form-control" name="estado" required="requiored">
-                            <!--<?php
-                                /*if($erro_estado){
-                                    echo '<font color="#FF0000">O estado digitado não existe ou foi digitado incorretamente</font>';
-                                }*/
-                            ?>-->
+                            <?php
+                                if($erro_estado){
+                                    echo '<font color="#FF0000">O nome do estado digitado foi digitado incorretamente</font>';
+                                }
+                            ?>
                         </div>
                     </div>
 
@@ -105,11 +103,11 @@
                         <div class="form-group">
                             <label for="">Digite sua cidade<a class="a">*</a></label>
                             <input type="text" class="form-control" name="cidade" required="requiored">
-                            <!--<?php
-                                /*if($erro_cidade){
-                                    echo '<font color="#FF0000">A cidade digitado não existe ou foi digitado incorretamente</font>';
-                                }*/
-                            ?>-->
+                            <?php
+                                if($erro_cidade){
+                                    echo '<font color="#FF0000">O nome da cidade digitado foi digitado incorretamente</font>';
+                                }
+                            ?>
                         </div>
                     </div>
 

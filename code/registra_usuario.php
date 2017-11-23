@@ -47,7 +47,7 @@
 
 	
 	//verifica se o país existe no banco de dados
-	$sql_pais = "SELECT * FROM pais AS p WHERE p.nome = '%$pais%'";
+	$sql_pais = "SELECT * FROM pais AS p WHERE p.nome like '%$pais%'";
 
 	if($resultado_pais = mysqli_query($link, $sql_pais)){
 		$dados_pais = mysqli_fetch_array($resultado_pais);
@@ -60,7 +60,7 @@
 	}
 
 	//verifica se o estado existe no banco de dados
-	$sql_estado = "SELECT * FROM estado AS e WHERE e.nome = '%$estado%'";
+	$sql_estado = "SELECT * FROM estado AS e WHERE e.nome like '%$estado%'";
 
 	if($resultado_estado = mysqli_query($link, $sql_estado)){
 		$dados_estado = mysqli_fetch_array($resultado_estado);
@@ -73,7 +73,7 @@
 	}
 
 	//verifica se a cidade existe no banco de dados
-	$sql_cidade = "SELECT * FROM cidade AS c WHERE c.nome = '%$cidade%'";
+	$sql_cidade = "SELECT * FROM cidade AS c WHERE c.nome like '%$cidade%'";
 
 	if($resultado_cidade = mysqli_query($link, $sql_cidade)){
 		$dados_cidade = mysqli_fetch_array($resultado_cidade);
