@@ -38,7 +38,7 @@
                 <div class="profile-sidebar">
                     <!-- SIDEBAR USERPIC -->
                     <div class="profile-userpic">
-                        <img src="https://pbs.twimg.com/profile_images/927318978116161536/B58Dq-Gz_400x400.jpg" class="img-responsive" alt="">
+                        <img src="../assets/_imagens/img_avatar.png" class="img-responsive" alt="">
                     </div>
                     <!-- END SIDEBAR USERPIC -->
                     <!-- SIDEBAR USER TITLE -->
@@ -52,7 +52,12 @@
                     <!-- SIDEBAR MENU -->
                     <div class="profile-usermenu">
                         <ul class="nav">
-                            <li class="active">
+                            <li>
+                                <a href="foto.php">
+                                <i class="glyphicon glyphicon-cog"></i>
+                                Alterar foto de perfil </a>
+                            </li>
+                            <li>
                                 <a href="#">
                                 <i class="glyphicon glyphicon-folder-open"></i>
                                 Histórico de eventos </a>
