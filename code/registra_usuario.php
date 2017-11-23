@@ -45,7 +45,7 @@
 		echo 'Erro ao tentar localizar o registro de e-mail';
 	}
 
-	
+	/*
 	//verifica se o país existe no banco de dados
 	$sql_pais = "SELECT * FROM pais AS p WHERE p.nome like '%$pais%'";
 
@@ -83,10 +83,10 @@
 		}
 	} else{
 		echo 'Erro ao tentar localizar o registro de cidade';
-	}
+	}*/
 
 
-	if($username_existe || $email_existe || $pais_existe || $estado_existe || $cidade_existe){
+	if($username_existe || $email_existe/* || $pais_existe || $estado_existe || $cidade_existe*/){
 		$retorno_get = '';
 
 		if($username_existe){
@@ -96,7 +96,7 @@
 		if($email_existe){
 			$retorno_get .= "erro_email=1&";
 		}
-		
+		/*
 		if($pais_existe){
 			$retorno_get .= "erro_pais=1&";
 		}
@@ -107,7 +107,7 @@
 
 		if($cidade_existe){
 			$retorno_get .= "erro_cidade=1&";
-		}
+		}*/
 
 		header('Location: cadastro-usuario.php?'. $retorno_get);
 		die();
