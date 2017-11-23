@@ -113,11 +113,14 @@
 
                     <div class="col-md-12">    
                         <div class="form-group">
-                            <label for="exampleInputFile">Insira uma foto de perfil:</label>
-                            <input type="file" id="">
-                            <p class="help-block">Arquivos .PNG, .JPEG, .JPG de no máximo 2Mb.</p>
+                            <form enctype="multipart/form-data" action="upload.php" method="POST">
+                                <label class="control-label">Insira uma foto de perfil:</label>
+                                <input id="arquivos" name="arquivos[]" type="file" class="file" multiple data-show-upload="false" data-show-caption="true">
+                                <p class="help-block">Arquivos .PNG, .JPEG, .JPG de no máximo 2Mb.</p>
+                            </form>
                         </div>
                     </div>
+                    
 
                     <div class="col-md-12">
                         <div class="checkbox">
@@ -135,7 +138,7 @@
                         </div>
                     </div>     
 
-                    <button type="submit" class="btn btn-info">Cadastrar usuário</button> 
+                    <button type="submit" class="btn btn-info" value="Enviar arquivo">Cadastrar usuário</button> 
                 </form>
             </div>
             <div class="col-md-3"></div>                   
