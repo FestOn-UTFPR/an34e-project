@@ -8,8 +8,8 @@
     require_once('db.class.php');
 
     $objDB = new db();
-    $link = $objDB->conecta_mysql();    
-?>
+    $link = $objDB->conecta_mysql(); 
+?>  
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
