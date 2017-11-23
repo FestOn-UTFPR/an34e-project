@@ -1,8 +1,6 @@
 <?php
     $erro_username = isset($_GET['erro_username']) ? $_GET['erro_username'] : 0;
     $erro_email = isset($_GET['erro_email']) ? $_GET['erro_email'] : 0;
-    $erro_pais = isset($_GET['erro_pais']) ? $_GET['erro_pais'] : 0;
-    $erro_estado = isset($_GET['erro_estado']) ? $_GET['erro_estado'] : 0;
     $erro_cidade = isset($_GET['erro_cidade']) ? $_GET['erro_cidade'] : 0;
 ?>
 <!DOCTYPE html>
@@ -75,21 +73,18 @@
 
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="">Digite seu país<a class="a">*</a></label>
-                            <input type="text" id="combo-estado" class="form-control" name="pais" required="requiored">
-                            <?php
-                                if($erro_pais){
-                                    echo '<font color="#FF0000">O nome do país digitado digitado incorretamente</font>';
-                                }
-                            ?>
+                            <label for="">Selecione seu país<a class="a">*</a></label>
+                            <select type="option" id="combo-estado" class="form-control" name="pais" required="requiored">
+                                <option selected="selected">Brasil</option> 
+                            </select>
+                            
                         </div>
                     </div>
 
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="">Digite seu estado<a class="a">*</a></label>
-                            <select type="option" class="form-control" name="estado" required="requiored">
-                                <option value="">Selecione o seu estado</option> 
+                            <label for="">Selecione seu estado<a class="a">*</a></label>
+                            <select type="option" class="form-control" name="estado" required="requiored"> 
                                 <option>Acre</option> 
                                 <option>Alagoas</option> 
                                 <option>Amapá</option> 
@@ -105,7 +100,7 @@
                                 <option>Minas Gerais</option> 
                                 <option>Pará</option> 
                                 <option>Paraíba</option> 
-                                <option>Paraná</option> 
+                                <option selected="selected">Paraná</option> 
                                 <option>Pernambuco</option> 
                                 <option>Piauí</option> 
                                 <option>Rio de Janeiro</option> 
