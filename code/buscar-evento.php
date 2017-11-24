@@ -1,8 +1,3 @@
-<?php
-    $erro_username = isset($_GET['erro_username']) ? $_GET['erro_username'] : 0;
-    $erro_email = isset($_GET['erro_email']) ? $_GET['erro_email'] : 0;
-    $erro_cidade = isset($_GET['erro_cidade']) ? $_GET['erro_cidade'] : 0;
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
