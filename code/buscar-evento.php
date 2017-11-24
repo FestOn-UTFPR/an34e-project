@@ -19,7 +19,7 @@
         <div class="container container-corpo">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-                <form method="post" action="registra_usuario.php" id="formCadastroUsuario">
+                <form method="post" action="get_evento.php" id="formGetEvento">
                     <div class="col-md-12">
                         <div class="panel panel-success">
                             <div class="panel-heading" style="background-color: #262626; color: white;">Buscar eventos por estado</div>
@@ -72,7 +72,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">Nome da cidade</label>
-                                            <input type="text" class="form-control" id="valor" placeholder="Digite o nome da cidade">
+                                            <input type="text" class="form-control" name="cidade" id="valor" placeholder="Digite o nome da cidade">
                                         </div>
                                     </div>
                                 </div>
@@ -88,7 +88,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">Nome do evento</label>
-                                            <input type="text" class="form-control" id="valor" placeholder="Digite o nome do evento">
+                                            <input type="text" class="form-control" name="evento" id="valor" placeholder="Digite o nome do evento">
                                         </div>
                                     </div>
                                 </div>
@@ -104,7 +104,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">Nome do organizador</label>
-                                            <input type="text" class="form-control" id="valor" placeholder="Digite o nome do organizador">
+                                            <input type="text" class="form-control" name="organizador" id="valor" placeholder="Digite o nome do organizador">
                                         </div>
                                     </div>
                                 </div>
