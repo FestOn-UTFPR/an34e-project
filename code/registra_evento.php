@@ -1,6 +1,10 @@
 <?php
 	session_start();
 
+	if(!isset($_SESSION['username'])){
+        header('Location: cadastro_evento_erro.php?erro=1');
+    }
+
 	require_once('db.class.php');
 
 	$nome_evento = $_POST['nome_evento'];
@@ -19,9 +23,9 @@
 	$objDB = new db();
 	$link = $objDB -> conecta_mysql();
 
-	$organizador = $_SESSION['username'];	
+	$username = $_SESSION['username'];	
 
-	$sql = "INSERT INTO cadastro_evento(nome_evento, atracoes_evento, data_evento, horario_inicio_evento, horario_termino_evento, id_pais, id_estado, id_cidade, endereco_evento, quantidade_ingressos, preco_ingressos, organizador_evento, classificacao_evento) VALUES ('$nome_evento', '$atracoes_evento','$data_evento','$hora_inicio','$hora_termino','$pais_evento','$estado_evento', '$cidade_evento', '$endereco_evento', '$quantidade_ingressos', '$preco_ingressos', '$organizador','$classificacao')";
+	$sql = "INSERT INTO cadastro_evento (NOME_EVENTO, ATRACOES_EVENTO, DATA_EVENTO, HORARIO_INICIO_EVENTO, HOTARIO_TERMINO_EVENTO, ID_PAIS, ID_ESTADO, ID_CIDADE, ENDERECO_EVENTO, QUANTIDADE_INGRESSOS, PRECO_INGRESSOS, ORGANIZADOR_EVENTO, CLASSIFICACAO_EVENTO) VALUES ('$nome_evento', '$atracoes_evento','$data_evento','$hora_inicio','$hora_termino','$pais_evento','$estado_evento', '$cidade_evento', '$endereco_evento', '$quantidade_ingressos', '$preco_ingressos', '$username','$classificacao')";
 
 	//executar query
 	if(mysqli_query($link, $sql)){

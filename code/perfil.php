@@ -12,7 +12,7 @@
 
     $username = $_SESSION['username'];
 
-    $sql = "SELECT * FROM cadastro_evento AS ce LEFT JOIN cadastro_usuario AS cu ON (ce.organizador_evento = $username) ";               
+    $sql = "select NOME_EVENTO, ATRACOES_EVENTO, date_format(DATA_EVENTO, '%d %b %Y') as data_evento_formatada, HORARIO_INICIO_EVENTO, HOTARIO_TERMINO_EVENTO, c.ID_PAIS, c.ID_ESTADO, c.ID_CIDADE, ENDERECO_EVENTO, QUANTIDADE_INGRESSOS, PRECO_INGRESSOS, ORGANIZADOR_EVENTO, CLASSIFICACAO_EVENTO from cadastro_evento as c where c.ORGANIZADOR_EVENTO = '$username' ";               
     $resultado_id = mysqli_query($link, $sql); 
  
 ?>
@@ -88,51 +88,36 @@
                     <!-- END MENU -->
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-8">
+            <h3 style="text-align: center;">Eventos cadastrados por: <?= $_SESSION['username']?></h3>
             <?php   
             if($resultado_id){
                 while($registro = mysqli_fetch_array($resultado_id, MYSQLI_ASSOC)){ 
                 echo '
                         <div class="col-md-12">
                             <div class="panel panel-success">
-                                <div class="panel-heading" style="background-color: #262626; color: white;">'.$registro['nome_evento'].'<h6>'.$registro['id_pais'].' - '.$registro['id_estado'].'</h6></div>
+                                <div class="panel-heading" style="background-color: #262626; color: white;">'.$registro['NOME_EVENTO'].'<h6>'.$registro['ID_PAIS'].' - '.$registro['ID_ESTADO'].'</h6></div>
                                 <div class="panel-body">
                                     <div class="row">         
-                                        <h5><span class="glyphicon glyphicon-star at"></span> '.$registro['atracoes_evento'].'</h5>
-                                        <img src="../assets/_imagens/ny.jpg" class="img-responsive" alt="" style="height: 260px; width: 600px; float: left;">
+                                        <h5><span class="glyphicon glyphicon-star at"></span> '.$registro['ATRACOES_EVENTO'].'</h5>
+                                        <img src="../assets/_imagens/ny.jpg" class="img-responsive" alt="" style="height: 360px; width: 800px; float: left;">
                                     </div>
                                     <div id="texto">
                                         <span class="glyphicon">&#xe109;</span>'.$registro['data_evento_formatada'].'<br> 
-                                        <span class="glyphicon glyphicon-time"></span>'.$registro['horario_inicio_evento'].' - '.$registro['horario_termino_evento'].'<br>
-                                        Cidade: '.$registro['id_cidade'].'<br>
-                                        <span class="glyphicon">&#xe062;</span>'.$registro['endereco_evento'].'<br>
-                                        Classificação indicativa: '.$registro['classificacao_evento'].'<br>
-                                    </div>
-                                    <div>
-                                        <button type="submit" class="btn">Comprar ingresso <span class="glyphicon">&#xe116;</span></button>
+                                        <span class="glyphicon glyphicon-time"></span>'.$registro['HORARIO_INICIO_EVENTO'].' - '.$registro['HOTARIO_TERMINO_EVENTO'].'<br>
+                                        Cidade: '.$registro['ID_CIDADE'].'<br>
+                                        <span class="glyphicon">&#xe062;</span>'.$registro['ENDERECO_EVENTO'].'<br>
+                                        Classificação indicativa: '.$registro['CLASSIFICACAO_EVENTO'].'<br>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-12">
-                                <form>
-                                    <div class="linha"></div>
-                                </form>
                             </div>
                         </div>
                     </div>';}}?>   
                 </div>
-            <div class="col-md-3">
-                <div class="profile-content">
-                   Some user related content goes here...
-                </div>
-            </div>
         </div>
     </div>
-            
-
-
         <footer id="rodape">
-          <div id="footer"></div>
+            <div id="footer"></div>
         </footer>
         <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     </body>
