@@ -1,3 +1,6 @@
+<<?php 
+    $erro_cidade = isset($_GET['erro_cidade']) ? $_GET['erro_cidade'] : 0;
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -59,35 +62,56 @@
 
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="">Digite seu país<a class="a">*</a></label>
-                            <input type="text" id="combo-estado" class="form-control" name="pais_evento" required="requiored">
-                            <?php
-                                if($erro_pais){
-                                    echo '<font color="#FF0000">O país digitado não existe ou foi digitado incorretamente</font>';
-                                }
-                            ?>
+                            <label for="">Selecione seu país<a class="a">*</a></label>
+                            <select type="option" id="combo-estado" class="form-control" name="pais" required="requiored">
+                                <option selected="selected">Brasil</option> 
+                            </select>
+                            
                         </div>
                     </div>
 
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="">Digite seu estado<a class="a">*</a></label>
-                            <input type="text" class="form-control" name="estado_evento" required="requiored">
-                            <?php
-                                if($erro_estado){
-                                    echo '<font color="#FF0000">O estado digitado não existe ou foi digitado incorretamente</font>';
-                                }
-                            ?>
+                            <label for="">Selecione seu estado<a class="a">*</a></label>
+                            <select type="option" class="form-control" name="estado" required="requiored"> 
+                                <option>Acre</option> 
+                                <option>Alagoas</option> 
+                                <option>Amapá</option> 
+                                <option>Amazonas</option> 
+                                <option>Bahia</option> 
+                                <option>Ceará</option> 
+                                <option>Distrito Federal</option> 
+                                <option>Espírito Santo</option> 
+                                <option>Goiás</option> 
+                                <option>Maranhão</option> 
+                                <option>Mato Grosso</option> 
+                                <option>Mato Grosso do Sul</option> 
+                                <option>Minas Gerais</option> 
+                                <option>Pará</option> 
+                                <option>Paraíba</option> 
+                                <option selected="selected">Paraná</option> 
+                                <option>Pernambuco</option> 
+                                <option>Piauí</option> 
+                                <option>Rio de Janeiro</option> 
+                                <option>Rio Grande do Norte</option> 
+                                <option>Rio Grande do Sul</option> 
+                                <option>Rondônia</option> 
+                                <option>Roraima</option> 
+                                <option>Santa Catarina</option> 
+                                <option>São Paulo</option> 
+                                <option>Sergipe</option> 
+                                <option>Tocantins</option>
+                            </select>    
                         </div>
                     </div>
 
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="">Digite sua cidade<a class="a">*</a></label>
-                            <input type="text" class="form-control" name="cidade_evento" required="requiored">
+                            <input type="text" class="form-control" name="cidade" required="requiored">
                             <?php
                                 if($erro_cidade){
-                                    echo '<font color="#FF0000">A cidade digitado não existe ou foi digitado incorretamente</font>';
+                                    echo '<font color="#FF0000">O nome da cidade digitado foi digitado incorretamente</font>';
                                 }
                             ?>
                         </div>
