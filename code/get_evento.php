@@ -9,7 +9,7 @@
     $objDB = new db();
     $link = $objDB->conecta_mysql();
     
-    $sql = "SELECT NOME_EVENTO, ATRACOES_EVENTO, date_format(DATA_EVENTO, '%d %b %Y') as data_evento_formatada, HORARIO_INICIO_EVENTO, HORARIO_TERMINO_EVENTO, ID_PAIS, ID_ESTADO, ID_CIDADE, ENDERECO_EVENTO, QUANTIDADE_INGRESSOS, PRECO_INGRESSOS, ORGANIZADOR_EVENTO, CLASSIFICACAO_EVENTO FROM cadastro_evento WHERE ID_ESTADO = '$estado'
+    $sql = "SELECT ID_EVENTO,NOME_EVENTO, ATRACOES_EVENTO, date_format(DATA_EVENTO, '%d %b %Y') as data_evento_formatada, HORARIO_INICIO_EVENTO, HORARIO_TERMINO_EVENTO, ID_PAIS, ID_ESTADO, ID_CIDADE, ENDERECO_EVENTO, QUANTIDADE_INGRESSOS, PRECO_INGRESSOS, ORGANIZADOR_EVENTO, CLASSIFICACAO_EVENTO FROM cadastro_evento WHERE ID_ESTADO = '$estado'
             OR ID_CIDADE = '$cidade'
             OR NOME_EVENTO = '$evento'
             OR ORGANIZADOR_EVENTO = '$organizador'";
@@ -17,8 +17,7 @@
     $resultado_id = mysqli_query($link, $sql);
 
     if($resultado_id){
-        while($registro = mysqli_fetch_array($resultado_id, MYSQLI_ASSOC)){
-        echo'
+         echo'
         <!DOCTYPE html>
         <html lang="pt-br">
             <head>
@@ -30,6 +29,7 @@
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
                 <script src="_javascript/init-config.js"></script>
+                <script src="api/pagseguro/pagseguro.js"></script>
                 <link rel="stylesheet" type="text/css" href="_css/css.css">
                 <style>
                     .linha{
@@ -41,13 +41,15 @@
                     }
                 </style>
             </head>
-            <body>
-                <nav class="navbar navbar-inverse bg-inverse nav-feston">
-                   <div id="header"></div>
-                </nav>
-                
+            <body>';
+                include('_subtamplates/header.php');
+                echo'
                 <div class="container container-corpo">
                     <div class="col-md-3"></div>
+                    ';
+                    while($registro = mysqli_fetch_array($resultado_id, MYSQLI_ASSOC)){
+                    echo'
+
                     <div class="col-md-6">
                         <div class="col-md-12">
                             <div class="panel panel-success">
@@ -67,7 +69,15 @@
                                         Classificação indicativa: '.$registro['CLASSIFICACAO_EVENTO'].'<br>
                                     </div>
                                     <div>
-                                        <button type="submit" class="btn">Comprar ingresso <span class="glyphicon">&#xe116;</span></button>
+                                        <button type="submit" class="btn" onClick="enviaPagseguro('.$registro['ID_EVENTO'].','.$registro['PRECO_INGRESSOS'].',\''.$registro['NOME_EVENTO'].'\')">Comprar ingresso <span class="glyphicon">&#xe116;</span></button>
+                                        <!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+                                        <form id="comprar" action="https://pagseguro.uol.com.br/checkout/v2/payment.html" method="post" onsubmit="PagSeguroLightbox(this); return false;">
+                                        <!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+                                        <input type="hidden" id="code" name="code" value="" />
+                                        <input type="hidden" name="iot" value="button" />
+                                        </form>
+                                        <script type="text/javascript" src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js"></script>
+                                        <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
                                     </div>
                                 </div>
                             </div>
@@ -77,7 +87,9 @@
                                 </form>
                             </div>
                         </div>
-                    </div>               
+                    </div> ';
+        }
+        echo '             
                     <div class="col-md-3"></div>                   
                 </div>
                 <footer id="rodape">
@@ -87,7 +99,6 @@
             </body>
         </html>
         ';
-        }
     }else{
         header('Location: get_evento_erro.php');
     }
