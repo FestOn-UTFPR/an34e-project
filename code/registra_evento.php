@@ -23,6 +23,6 @@
 	if(mysqli_query($link, $sql)){
 		header('Location: registra_evento_sucesso.php');
 	} else{
-		header('Location: registra_evento
+		header('Location: registra_evento_erro.php')
 	}
 ?>
