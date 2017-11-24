@@ -25,11 +25,7 @@
 			}
 		</style>
 	</head>
-	<body>	<!--
-		<nav class="navbar navbar-inverse bg-inverse nav-feston">
-			<div id="header"></div>
-        </nav>-->
-
+	<body>
         <?php include('_subtamplates/header.php') ?>
 
         <div class="container container-corpo">
@@ -49,7 +45,7 @@
 				        <div class="carousel-caption">
 				          	<h1>O que é</h1>
 				          	<p class="texto_carrosel">
-				          		O Fest.On é um aplicativo de cadastro de eventos e venda de ingressos, (com ele é possível comprar ingressos eventos e sua carga de ingressos, local, data, horário, entre outras diversas informações.
+				          		O Fest.On é um aplicativo de cadastro de eventos e venda de ingressos, com ele é possível comprar ingressos eventos e sua carga de ingressos, local, data, horário, entre outras diversas informações.
 				          	</p>
 				        </div>
 			      	</div>
@@ -59,7 +55,7 @@
 				        <div class="carousel-caption">
 				          	<h1>Como comprar ingressos</h1>
 				          	<p class="texto_carrosel">
-				          		Para <a href="buscar-eventos.html">comprar ingressos</a> para um evento, é necessário realizar um <a href="cadastro-usuario.html">cadastro de usuário</a> que também poderá ser efetuado por meio de login pelo Facebook, feito isso é só escolher o evento, a quantidade de ingressos e informar a forma de pagamento, que irá ser efetuado pela plataforma de pagamentos <a href="https://pagseguro.uol.com.br/" target="_blank">"PagSeguro"</a>. É importante saber que só será possível realizar a compra de ingressos, se a idade do comprador for maior ou igual a classificação do evento. Para compras que incluem mais de um ingresso, será necessário informar o perfil das pessoas para quem os ingressos serão comprados, isso ocorre para que seja aplicada a regra de classificação de idade do evento, e também para o evento ficar no histórico de eventos das outras pessoas.
+				          		Para <a href="buscar-evento.php">comprar ingressos</a> para um evento, é necessário realizar um <a href="cadastro-usuario.php">cadastro de usuário</a> que também poderá ser efetuado por meio de login pelo Facebook, feito isso é só escolher o evento, a quantidade de ingressos e informar a forma de pagamento, que irá ser efetuado pela plataforma de pagamentos <a href="https://pagseguro.uol.com.br/" target="_blank">"PagSeguro"</a>. É importante saber que só será possível realizar a compra de ingressos, se a idade do comprador for maior ou igual a classificação do evento. Para compras que incluem mais de um ingresso, será necessário informar o perfil das pessoas para quem os ingressos serão comprados, isso ocorre para que seja aplicada a regra de classificação de idade do evento, e também para o evento ficar no histórico de eventos das outras pessoas.
 				          	</p>
 				        </div>
 				    </div>
@@ -69,7 +65,7 @@
 				        <div class="carousel-caption">
 				          	<h1>Como cadastrar eventos</h1>
 				          	<p class="texto_carrosel">
-				          		Para <a href="cadastrar-eventos.html">cadastrar um evento</a>, é necessário realizar um <a href="cadastro-usuario.html">cadastro de conta</a> que também poderá ser efetuado por meio de login pelo Facebook, feito isso, as informações do evento deverão ser preenchidas, tais como o nome do evento, a carga de ingressos, os preços dos ingressos, o local do evento, data, horário, destalhes, entre outras informações...
+				          		Para <a href="cadastrar-eventos.php">cadastrar um evento</a>, é necessário realizar um <a href="cadastro-usuario.php">cadastro de conta</a> que também poderá ser efetuado por meio de login pelo Facebook, feito isso, as informações do evento deverão ser preenchidas, tais como o nome do evento, a carga de ingressos, os preços dos ingressos, o local do evento, data, horário, destalhes, entre outras informações...
 				          	</p>
 				        </div>
 			      	</div>
