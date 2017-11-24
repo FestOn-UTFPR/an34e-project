@@ -127,8 +127,9 @@
                             ?>
                         </div>
                     </div>    
-
-                    <button type="submit" class="btn btn-info" value="Enviar arquivo">Cadastrar usuário</button> 
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-info" value="Enviar arquivo">Cadastrar Usuário</button> 
+                    </div>
                 </form>
             </div>
             <div class="col-md-3"></div>                   
