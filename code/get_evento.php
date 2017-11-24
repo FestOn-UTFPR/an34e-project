@@ -2,9 +2,9 @@
 	require_once('db.class.php');
 
     $estado = $_POST['estado'];
-    $cidade = $_SESSION['cidade']; 
+    $cidade = $_POST['cidade']; 
     $evento = $_POST['evento'];
-    $organizador = $_SESSION['organizador'];    
+    $organizador = $_POST['organizador'];    
 
     $objDB = new db();
     $link = $objDB->conecta_mysql();
@@ -17,32 +17,59 @@
     $resultado_id = mysqli_query($link, $sql);
 
     if($resultado_id){
-        header('Location: eventos.php');
         while($registro = mysqli_fetch_array($resultado_id, MYSQLI_ASSOC)){
-            echo '<a href="#" class="list-group-item">';
-                echo '<strong>'.$registro['usuario'].'</strong> <small> - '.$registro['email'].' </small>';
-                echo '<p class="list-group-item-text pull-right">';
-                    //btn
-                    $esta_seguindo_usuario_sn = isset($registro['id_usuario_seguidor']) && !empty($registro['id_usuario_seguidor']) ? 'S' : 'N';
 
-                    $btn_seguir_display = 'block';
-                    $btn_deixar_seguir_display = 'block';
+                echo '<h4 class="list-group-item-heading">'.$registro['nome_evento'].'<small> - '.$registro['id_pais'].'</small></h4>';
+                echo '<p class="list-group-item-text">'.$registro['atracoes_evento'].'</p>';
+            /*
+            $nome_evento = $_POST['nome_evento'];
+    $atracoes_evento = $_POST['atracoes_evento'];
+    $data_evento = $_POST['data_evento'];
+    $hora_inicio = $_POST['hora_inicio'];
+    $hora_termino = $_POST['hora_termino'];
+    $pais_evento = $_POST['pais_evento'];
+    $estado_evento = $_POST['estado_evento'];
+    $cidade_evento = $_POST['cidade_evento'];
+    $endereco_evento = $_POST['endereco_evento'];
+    $quantidade_ingressos = $_POST['quantidade_ingressos'];
+    $preco_ingressos = $_POST['preco_ingressos'];*/
 
-                    if($esta_seguindo_usuario_sn == 'N'){
-                        $btn_deixar_seguir_display = 'none';
-                    } else{
-                        $btn_seguir_display = 'none';
-                    }
-
-                    echo '<button type="button" id="btn_seguir_' . $registro['id'] . '" style="display: ' . $btn_seguir_display . '" class="btn btn-default btn_seguir" data-id_usuario="' . $registro['id'] . '">Seguir</button>';
-
-                    echo '<button type="button" id="btn_deixar_seguir_' . $registro['id'] . '" style="display: ' . $btn_deixar_seguir_display . '" class="btn btn-primary btn_deixar_seguir" data-id_usuario="' . $registro['id'] . '">Deixar de Seguir</button>';
-                echo '</p>';
-                echo '<div class="clearfix"></div>';
-            echo '</a>';
+    echo'
+    <!DOCTYPE html>
+    <html lang="pt-br">
+        <head>
+            <meta charset="utf-8">
+            <title>Fest.On</title>
+            <link rel="icon" type="image/gif/png" href="../assets/_imagens/favicon-feston.png">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <script src="_javascript/init-config.js"></script>
+            <link rel="stylesheet" type="text/css" href="_css/css.css">
+        </head>
+        <body>
+            <nav class="navbar navbar-inverse bg-inverse nav-feston">
+               <div id="header"></div>
+            </nav>
+            
+            <div class="container container-corpo">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <h4 class="list-group-item-heading">'.$registro['nome_evento'].'<small> - '.$registro['id_pais'].'</small></h4>
+                </div>               
+                <div class="col-md-3"></div>                   
+            </div>
+            <footer id="rodape">
+                <div id="footer"></div>
+            </footer>
+            <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+        </body>
+    </html>
+    ';
         }
     }else{
-        echo 'Erro na consulta de usuarios no banco de dados!';
+        echo 'Erro na consulta de tweets no banco de dados!';
     }
 
 

@@ -71,8 +71,8 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="profile-content">
-                   Some user related content goes here...
+                <div class="list-group">
+                    
                 </div>
             </div>
             <div class="col-md-3">
