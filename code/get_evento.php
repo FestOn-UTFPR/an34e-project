@@ -31,7 +31,15 @@
                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
                 <script src="_javascript/init-config.js"></script>
                 <link rel="stylesheet" type="text/css" href="_css/css.css">
-                
+                <style>
+                    .linha{
+                        background-color: gray;
+                        width: auto;
+                        height: 3px;
+                        margin-top: 25px;
+                        margin-bottom: 25px;
+                    }
+                </style>
             </head>
             <body>
                 <nav class="navbar navbar-inverse bg-inverse nav-feston">
@@ -81,7 +89,7 @@
         ';
         }
     }else{
-        echo 'Erro na consulta de tweets no banco de dados!';
+        header('Location: get_evento_erro.php');
     }
 
     header('Location: get_evento_erro.php');
