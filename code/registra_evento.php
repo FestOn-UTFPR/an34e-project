@@ -20,8 +20,8 @@
 
 	//executar query
 	if(mysqli_query($link, $sql)){
-		echo 'Evento registrado com sucesso!';
+		header('Location: registra_evento_sucesso.php');
 	} else{
-		echo 'Erro ao registrar evento';
+		header('Location: registra_evento_erro.php');
 	}
 ?>
