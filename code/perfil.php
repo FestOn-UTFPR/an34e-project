@@ -9,7 +9,12 @@
 
     $objDB = new db();
     $link = $objDB->conecta_mysql(); 
-?>  
+
+    $username = $_SESSION['username'];
+
+    $sql = "SELECT foto_usuario FROM cadastro_usuario WHERE username = '$username'";
+ 
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -38,7 +43,9 @@
                 <div class="profile-sidebar">
                     <!-- SIDEBAR USERPIC -->
                     <div class="profile-userpic">
-                        <img src="../assets/_imagens/img_avatar.png" class="img-responsive" alt="">
+                        <?php
+                            echo "<img src='./uploads/".$username->sql."'/>"
+                        ?>
                     </div>
                     <!-- END SIDEBAR USERPIC -->
                     <!-- SIDEBAR USER TITLE -->
