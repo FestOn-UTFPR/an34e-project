@@ -1,6 +1,3 @@
-<<?php 
-    $erro_cidade = isset($_GET['erro_cidade']) ? $_GET['erro_cidade'] : 0;
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -109,11 +106,6 @@
                         <div class="form-group">
                             <label for="">Digite sua cidade<a class="a">*</a></label>
                             <input type="text" class="form-control" name="cidade" required="requiored">
-                            <?php
-                                if($erro_cidade){
-                                    echo '<font color="#FF0000">O nome da cidade digitado foi digitado incorretamente</font>';
-                                }
-                            ?>
                         </div>
                     </div>
 
