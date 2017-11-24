@@ -2,7 +2,7 @@
     session_start();
 
     if(!isset($_SESSION['username'])){
-        header('Location: cadastro-usuario.php?erro=1');
+        header('Location: login-usuario.php?erro=1');
     }
 
     require_once('db.class.php');

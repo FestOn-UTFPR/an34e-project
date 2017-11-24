@@ -67,32 +67,28 @@
 		  				<div class="form-group">
 						    <label class="col-sm-2">Senha:</label>
 						    <div class="col-sm-10">
-						    	<input type="password" class="form-control" id="campo_senha" name="senha" placeholder="Digite sua senha">
+						    	<input type="password" class="form-control" id="campo_senha" name="senha" placeholder="Digite sua senha"><br>
 						    </div>
 		  				</div>
 		  			</div>
-
-		  			<div class="col-md-12">
-						<div class="form-group">
-					      	<div class="checkbox">
-						        <label>
-						            <input type="checkbox">Lembrar-me
-						        </label>
-					        </div>
-					  	</div>
-					</div>
-
+		  			
 		  			<div class="col-md-12">
 					 	<div class="form-group">						    	
 				      		<button type="buttom" class="btn btn-primary" id="btn_login">Entrar</button>
 						</div>
 					 </div>
 				</form>
-				<?php
-					if($erro == 1){
-						echo '<font color="#FF0000"><span class="glyphicon glyphicon-remove"></span>Usuário e/ou senha incorreto(s)</font>';
-					}
-				?>	
+
+				<div class="col-md-12">
+					<div class="form-group">
+						<?php
+							if($erro == 1){
+								echo '<font color="#FF0000"><span class="glyphicon glyphicon-remove"></span>Usuário e/ou senha incorreto(s)</font>';
+							}
+						?>
+					</div>
+				</div>		
+
 				<div class="col-md-12 linha"></div>
 
 				<div class="col-md-12">

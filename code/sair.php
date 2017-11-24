@@ -1,9 +1,12 @@
 <?php
 	session_start();
 
+    /*
 	unset ($_SESSION['usuario']);
 	unset ($_SESSION['email']);
-
+    */
+    session_unset(); 
+    
 	$erro = isset($_GET['erro']) ? $_GET['erro']: 0;
 ?>
 <!DOCTYPE html>
