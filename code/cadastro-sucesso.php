@@ -17,7 +17,7 @@
         <nav class="navbar navbar-inverse bg-inverse">
             <div class="container">
                 <div class="navbar-header">
-                    <img src="../assets/_imagens/logo_feston_menu.png" alt="logo" width="140" height="110">   
+                    <a href="../code/index.php"><img src="../assets/_imagens/logo_feston_menu.png" alt="logo" width="140" height="110"></a>   
                 </div>     
             </div>
         </nav>

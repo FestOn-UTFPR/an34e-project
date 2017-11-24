@@ -21,9 +21,7 @@
         <link rel="stylesheet" type="text/css" href="_css/css.css">
     </head>
     <body>
-        <nav class="navbar navbar-inverse bg-inverse nav-feston">
-            <div id="header"></div>
-        </nav>
+        <?php include('_subtamplates/header.php') ?>
 
     	<div class="container container-corpo">
             <div class="col-md-3"></div>

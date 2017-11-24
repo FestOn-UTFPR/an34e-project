@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -11,12 +14,16 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="_javascript/init-config.js"></script>
         
-		<link rel="stylesheet" type="text/css" href="_css/css.css">   
+		<link rel="stylesheet" type="text/css" href="_css/css.css"> 
+
+        <style type="text/css">
+            .texto_quem_somos{
+                text-align: justify;
+            }
+        </style>  
 	</head>
 	<body>
-		<nav class="navbar navbar-inverse bg-inverse nav-feston">
-			<div id="header"></div>
-        </nav>
+		<?php include('_subtamplates/header.php') ?>
 
         <div class="container container-corpo">
             <div class="col-md-3"></div>

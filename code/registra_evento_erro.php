@@ -16,9 +16,7 @@
         <link rel="stylesheet" type="text/css" href="_css/css_perfil.css">
     </head>
     <body>
-        <nav class="navbar navbar-inverse bg-inverse nav-feston">
-            <div id="header"></div>
-        </nav>
+        <?php include('_subtamplates/header.php') ?>
 
         <div class="container container-corpo">
         <div class="row profile">
