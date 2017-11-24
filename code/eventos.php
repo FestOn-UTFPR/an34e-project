@@ -1,15 +1,3 @@
-<?php
-    session_start();
-
-    if(!isset($_SESSION['username'])){
-        header('Location: cadastro-usuario.php?erro=1');
-    }
-
-    require_once('db.class.php');
-
-    $objDB = new db();
-    $link = $objDB->conecta_mysql(); 
-?>  
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
