@@ -1,3 +1,10 @@
+<?php
+    session_start();
+
+    if(!isset($_SESSION['username'])){
+        header('Location: cadastro_evento_erro.php?erro=1');
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
