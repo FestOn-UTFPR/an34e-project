@@ -44,4 +44,11 @@
     }else{
         echo 'Erro na consulta de usuarios no banco de dados!';
     }
+
+
+    if(mysqli_query($link, $sql)){
+        echo 'Evento registrado com sucesso!';
+    } else{
+        echo 'Erro ao registrar evento';
+    }
 ?>
