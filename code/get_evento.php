@@ -30,6 +30,7 @@
                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
                 <script src="_javascript/init-config.js"></script>
                 <script src="api/pagseguro/pagseguro.js"></script>
+                <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
                 <link rel="stylesheet" type="text/css" href="_css/css.css">
                 <style>
                     .linha{
@@ -69,7 +70,7 @@
                                         Classificação indicativa: '.$registro['CLASSIFICACAO_EVENTO'].'<br>
                                     </div>
                                     <div>
-                                        <button type="submit" class="btn" onClick="enviaPagseguro('.$registro['ID_EVENTO'].','.$registro['PRECO_INGRESSOS'].',\''.$registro['NOME_EVENTO'].'\')">Comprar ingresso <span class="glyphicon">&#xe116;</span></button>
+                                        <button type="submit" class="btn" onClick="enviaPagseguro()">Comprar ingresso <span class="glyphicon">&#xe116;</span></button>
                                         <!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
                                         <form id="comprar" action="https://pagseguro.uol.com.br/checkout/v2/payment.html" method="post" onsubmit="PagSeguroLightbox(this); return false;">
                                         <!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
@@ -94,8 +95,7 @@
                 </div>
                 <footer id="rodape">
                     <div id="footer"></div>
-                </footer>
-                <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+                </footer>                
             </body>
         </html>
         ';
