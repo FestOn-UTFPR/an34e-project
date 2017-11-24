@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿<?php
+    session_start();
+?>
+<!DOCTYPE html>
 <html lang="pt-br">
 	<head>
 		<meta charset="utf-8">
@@ -22,10 +25,12 @@
 			}
 		</style>
 	</head>
-	<body>	
+	<body>	<!--
 		<nav class="navbar navbar-inverse bg-inverse nav-feston">
 			<div id="header"></div>
-        </nav>
+        </nav>-->
+
+        <?php include('_subtamplates/header.php') ?>
 
         <div class="container container-corpo">
 		 	<div id="myCarousel" class="carousel slide" data-ride="carousel">
