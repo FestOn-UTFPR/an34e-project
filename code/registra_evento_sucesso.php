@@ -31,7 +31,7 @@
         
         <div class="container container-corpo">
             <div class="jumbotron">
-                <h1>Seu evento cadastro foi realizado com sucesso :)</h1>
+                <h1>Seu evento foi cadastrado com sucesso :)</h1>
                 <br>
                 <p class="sucesso">
                     <a href="perfil.php">Clique aqui</a> para ir para seu perfil, ou <a href="index.php">aqui</a> para ir para a página inicial do Fest.On

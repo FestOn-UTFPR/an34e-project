@@ -17,12 +17,16 @@
 	$objDB = new db();
 	$link = $objDB -> conecta_mysql();
 
-	$sql = "INSERT INTO cadastro_evento(nome_evento, atracoes_evento, data_evento, horario_inicio_evento, horario_termino_evento, id_pais, id_estado, id_cidade, endereco_evento, quantidade_ingressos, preco_ingressos, classificaca_evento) VALUES ('$nome_evento', '$atracoes_evento','$data_evento','$hora_inicio','$hora_termino','$pais_evento','$estado_evento', '$cidade_evento', '$endereco_evento', '$quantidade_ingressos', '$preco_ingressos', '$classificacao')";
+	$sql = "INSERT INTO cadastro_evento(nome_evento, atracoes_evento, data_evento, horario_inicio_evento, horario_termino_evento, id_pais, id_estado, id_cidade, endereco_evento, quantidade_ingressos, preco_ingressos, classificacao_evento) VALUES ('$nome_evento', '$atracoes_evento','$data_evento','$hora_inicio','$hora_termino','$pais_evento','$estado_evento', '$cidade_evento', '$endereco_evento', '$quantidade_ingressos', '$preco_ingressos', '$classificacao')";
 
 	//executar query
 	if(mysqli_query($link, $sql)){
+		echo 'asdasdasdasd';
 		header('Location: registra_evento_sucesso.php');
+		echo 'asdasdasdasd';
 	} else{
-		header('Location: registra_evento_erro.php')
+		echo 'asdasdasdasd';
+		header('Location: registra_evento_erro.php');
+		echo 'asdasdasdasd';
 	}
 ?>
