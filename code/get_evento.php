@@ -10,9 +10,9 @@
     $link = $objDB->conecta_mysql();
     
     $sql = "SELECT nome_evento, atracoes_evento, date_format(data_evento, '%d %b %Y') as data_evento_formatada, horario_inicio_evento, horario_termino_evento, id_pais, id_estado, id_cidade, endereco_evento, quantidade_ingressos, preco_ingressos, classificacao_evento FROM cadastro_evento AS c WHERE id_estado = '$estado'
-                                                OR id_cidade = '$cidade'
-                                                OR nome_evento = '$evento'
-                                                OR organizador_evento = '$organizador'";
+            OR id_cidade = '$cidade'
+            OR nome_evento = '$evento'
+            OR organizador_evento = '$organizador'";
 
 
     $resultado_id = mysqli_query($link, $sql);
@@ -62,8 +62,8 @@
                                         <div id="texto">
                                             <span class="glyphicon">&#xe109;</span>'.$registro['data_evento_formatada'].'<br> 
                                             <span class="glyphicon glyphicon-time"></span>'.$registro['horario_inicio_evento'].' - '.$registro['horario_termino_evento'].'<br>
-                                            <span class="glyphicon">&#xe062;</span>'.$registro['endereco_evento'].'<br>
                                             Cidade: '.$registro['id_cidade'].'<br>
+                                            <span class="glyphicon">&#xe062;</span>'.$registro['endereco_evento'].'<br>
                                             Quantidade de ingressos: '.$registro['quantidade_ingressos'].'<br>
                                             <span class="glyphicon glyphicon-usd"></span> Preço do ingresso: R$ '.$registro['preco_ingressos'].'<br>
                                             Classificação indicativa: '.$registro['classificacao_evento'].'<br>
