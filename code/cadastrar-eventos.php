@@ -1,8 +1,3 @@
-<?php
-    $erro_pais = isset($_GET['erro_pais']) ? $_GET['erro_pais'] : 0;
-    $erro_estado = isset($_GET['erro_estado']) ? $_GET['erro_estado'] : 0;
-    $erro_cidade = isset($_GET['erro_cidade']) ? $_GET['erro_cidade'] : 0;
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
