@@ -4,8 +4,8 @@ $data['email'] = 'renanlaureano@gmail.com';
 $data['currency'] = 'BRL';
 $data['itemId1'] = '1';
 $data['itemQuantity1'] = '1';
-$data['itemDescription1'] = 'Festa no Apê';
-$data['itemAmount1'] = '22';
+$data['itemDescription1'] = 'Produto de Teste';
+$data['itemAmount1'] = '299.00';
 
 $url = 'https://ws.pagseguro.uol.com.br/v2/checkout';
 
