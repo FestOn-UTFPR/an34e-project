@@ -59,7 +59,7 @@
 
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="">Selecione seu país<a class="a">*</a></label>
+                            <label for="">Selecione o país<a class="a">*</a></label>
                             <select type="option" id="combo-estado" class="form-control" name="pais_evento" required="requiored">
                                 <option selected="selected">Brasil</option> 
                             </select>
@@ -69,7 +69,7 @@
 
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="">Selecione seu estado<a class="a">*</a></label>
+                            <label for="">Selecione o estado<a class="a">*</a></label>
                             <select type="option" class="form-control" name="estado_evento" required="requiored"> 
                                 <option>Acre</option> 
                                 <option>Alagoas</option> 
@@ -104,8 +104,8 @@
 
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="">Digite sua cidade<a class="a">*</a></label>
-                            <input type="text" class="form-control" name="cidade_evento" required="requiored">
+                            <label for="">Digite a cidade<a class="a">*</a></label>
+                            <input type="text" class="form-control" name="cidade_evento" required="requiored" placeholder="Digite a cidade do seu evento">
                         </div>
                     </div>
 
@@ -129,6 +129,13 @@
                             <input type="number" class="form-control" id="" name="preco_ingressos" placeholder="Digite o valor dos ingressos do seu evento" required="requiored">
                         </div>
                     </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">Classificação do seu evento<a class="a">*</a></label>
+                            <input type="number" class="form-control" id="" max="100" name="classificacao_evento" placeholder="Digite classificação indicativa do seu evento" required="requiored">
+                        </div>
+                    </div>
                             
                     <div class="col-md-12">    
                         <div class="form-group">
@@ -136,25 +143,11 @@
                             <input type="file" id="">
                             <p class="help-block">Arquivos .PNG, .JPEG, .JPG de no máximo 2Mb.</p>
                         </div>
-                    </div>
+                    </div>   
 
                     <div class="col-md-12">
-                        <div class="checkbox">
-                            <label>
-                            <input type="checkbox">Aceito os termos de de uso e privacidade
-                            </label>
-                        </div>
+                        <button type="submit" class="btn btn-default">Cadastrar evento</button> 
                     </div>
-
-                    <div class="col-md-12">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox">Quero receber e-mails com novidades sobre o Fest.On
-                            </label>
-                        </div>
-                    </div>     
-
-                    <button type="submit" class="btn btn-info">Cadastrar usuário</button> 
                 </form>
             </div>
             <div class="col-md-3"></div>                   

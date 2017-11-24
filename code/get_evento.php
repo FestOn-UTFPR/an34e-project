@@ -9,10 +9,11 @@
     $objDB = new db();
     $link = $objDB->conecta_mysql();
     
-    $sql = "SELECT * FROM cadastro_evento AS c WHERE id_estado = '$estado'
+    $sql = "SELECT nome_evento, atracoes_evento, date_format(data_evento, '%d %b %Y') as data_evento_formatada, horario_inicio_evento, horario_termino_evento, id_pais, id_estado, id_cidade, endereco_evento, quantidade_ingressos, preco_ingressos, classificacao_evento FROM cadastro_evento AS c WHERE id_estado = '$estado'
                                                 OR id_cidade = '$cidade'
                                                 OR nome_evento = '$evento'
                                                 OR organizador_evento = '$organizador'";
+
 
     $resultado_id = mysqli_query($link, $sql);
 
@@ -55,16 +56,17 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         
-                                    <h5><span class="glyphicon glyphicon-star"></span> '.$registro['atracoes_evento'].'</h5>
+                                    <h5><span class="glyphicon glyphicon-star at"></span> '.$registro['atracoes_evento'].'</h5>
                                         <img src="../assets/_imagens/ny.jpg" class="img-responsive" alt="" style="height: 260px; width: 600px; float: left;">
                                     </div>
                                         <div id="texto">
-                                            <span class="glyphicon">&#xe109;</span>'.$registro['data_evento'].'<br> 
+                                            <span class="glyphicon">&#xe109;</span>'.$registro['data_evento_formatada'].'<br> 
                                             <span class="glyphicon glyphicon-time"></span>'.$registro['horario_inicio_evento'].' - '.$registro['horario_termino_evento'].'<br>
                                             <span class="glyphicon">&#xe062;</span>'.$registro['endereco_evento'].'<br>
                                             Cidade: '.$registro['id_cidade'].'<br>
                                             Quantidade de ingressos: '.$registro['quantidade_ingressos'].'<br>
                                             <span class="glyphicon glyphicon-usd"></span> Preço do ingresso: R$ '.$registro['preco_ingressos'].'<br>
+                                            Classificação indicativa: '.$registro['classificacao_evento'].'<br>
                                         </div>
                                     <div >
                                         <button type="submit" class="btn">Comprar ingresso <span class="glyphicon">&#xe116;</span></button>
