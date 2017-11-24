@@ -34,7 +34,7 @@
                 <h1>Seu evento não foi cadastrado :(</h1>
                 <br>
                 <p class="sucesso">
-                    <a href="cadastrar-evento.php">Clique aqui</a> para voltar para a página de cadastro de eventos, ou <a href="perfil.php">aqui</a> para voltar para seu perfil do Fest.On
+                    <a href="cadastrar-eventos.php">Clique aqui</a> para voltar para a página de cadastro de eventos, ou <a href="perfil.php">aqui</a> para voltar para seu perfil do Fest.On
                 </p>
             </div>
            <div class="clearfix"></div>
