@@ -1,10 +1,4 @@
 <?php
-	session_start();
-
-	if(!$_SESSION['usuario']){
-		header('Location: index.php?erro=1');
-	}
-
 	require_once('db.class.php');
 
     $estado = $_POST['estado'];
@@ -15,14 +9,18 @@
     $objDB = new db();
     $link = $objDB->conecta_mysql();
     
-    $sql = "SELECT u.*, us.* FROM usuarios AS u LEFT JOIN usuarios_seguidores AS us ON (us.id_usuario = $id_usuarios AND u.id = us.seguindo_id_usuario) WHERE u.usuario like '%$nome_pessoas%' AND u.id <> $id_usuarios";
+    $sql = "SELECT * FROM cadastro_evento AS c WHERE id_estado = '$estado'
+                                                OR id_cidade = '$cidade'
+                                                OR nome_evento = '$evento'
+                                                OR organizador_evento = '$organizador'";
 
     $resultado_id = mysqli_query($link, $sql);
 
     if($resultado_id){
+        header('Location: eventos.php');
         while($registro = mysqli_fetch_array($resultado_id, MYSQLI_ASSOC)){
             echo '<a href="#" class="list-group-item">';
-            	echo '<strong>'.$registro['usuario'].'</strong> <small> - '.$registro['email'].' </small>';
+                echo '<strong>'.$registro['usuario'].'</strong> <small> - '.$registro['email'].' </small>';
                 echo '<p class="list-group-item-text pull-right">';
                     //btn
                     $esta_seguindo_usuario_sn = isset($registro['id_usuario_seguidor']) && !empty($registro['id_usuario_seguidor']) ? 'S' : 'N';

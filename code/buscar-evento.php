@@ -29,6 +29,7 @@
                                         <div class="form-group">
                                             <label for="">Selecione o estado do evento</label>
                                             <select type="option" class="form-control" name="estado" required="requiored"> 
+                                                <option>Selecione um estado</option>
                                                 <option>Acre</option> 
                                                 <option>Alagoas</option> 
                                                 <option>Amapá</option> 
@@ -44,7 +45,7 @@
                                                 <option>Minas Gerais</option> 
                                                 <option>Pará</option> 
                                                 <option>Paraíba</option> 
-                                                <option selected="selected">Paraná</option> 
+                                                <option>Paraná</option> 
                                                 <option>Pernambuco</option> 
                                                 <option>Piauí</option> 
                                                 <option>Rio de Janeiro</option> 
