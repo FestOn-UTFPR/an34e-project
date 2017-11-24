@@ -10,24 +10,6 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="_javascript/init-config.js"></script>
         <link rel="stylesheet" type="text/css" href="_css/css.css">
-
-        <script type="text/javascript">
-            /*$(document).ready(function(){
-                //associar o evento de click ao botão
-                $('#btn_procurar_pessoa').click(function(){
-                    if($('#nome_pessoa').val().length > 0){
-                        $.ajax({
-                            url: 'get_pessoas.php',
-                            method: 'POST',
-                            data: $('#form_procurar_pessoas').serialize(),
-                            success: function(data){
-                                $('#pessoas').html(data);
-                            }
-                        });  
-                    }
-                }); 
-            });   */  
-        </script>
     </head>
     <body>
         <nav class="navbar navbar-inverse bg-inverse nav-feston">
