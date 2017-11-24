@@ -14,6 +14,8 @@
 
     $sql = "select NOME_EVENTO, ATRACOES_EVENTO, date_format(DATA_EVENTO, '%d %b %Y') as data_evento_formatada, HORARIO_INICIO_EVENTO, HORARIO_TERMINO_EVENTO, c.ID_PAIS, c.ID_ESTADO, c.ID_CIDADE, ENDERECO_EVENTO, QUANTIDADE_INGRESSOS, PRECO_INGRESSOS, ORGANIZADOR_EVENTO, CLASSIFICACAO_EVENTO from cadastro_evento as c where c.ORGANIZADOR_EVENTO = '$username' ";               
     $resultado_id = mysqli_query($link, $sql); 
+
+    $sql_foto = "SELECT foto_usuario FROM cadastro_usuario WHERE username = '$username'";
  
 ?>
 <!DOCTYPE html>
@@ -42,9 +44,7 @@
                 <div class="profile-sidebar">
                     <!-- SIDEBAR USERPIC -->
                     <div class="profile-userpic">
-                        <?php
-                            echo "<img src='./uploads/".$username->sql."'/>"
-                        ?>
+                        <img src="../assets/_imagens/img_avatar.png">
                     </div>
                     <!-- END SIDEBAR USERPIC -->
                     <!-- SIDEBAR USER TITLE -->
