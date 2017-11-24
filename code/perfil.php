@@ -12,7 +12,8 @@
 
     $username = $_SESSION['username'];
 
-    $sql = "SELECT foto_usuario FROM cadastro_usuario WHERE username = '$username'";
+    $sql = "SELECT * FROM cadastro_evento AS ce LEFT JOIN cadastro_usuario AS cu ON (ce.organizador_evento = $username) ";               
+    $resultado_id = mysqli_query($link, $sql); 
  
 ?>
 <!DOCTYPE html>
@@ -88,10 +89,38 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="profile-content">
-                   Some user related content goes here...
+            <?php   
+            if($resultado_id){
+                while($registro = mysqli_fetch_array($resultado_id, MYSQLI_ASSOC)){ 
+                echo '
+                        <div class="col-md-12">
+                            <div class="panel panel-success">
+                                <div class="panel-heading" style="background-color: #262626; color: white;">'.$registro['nome_evento'].'<h6>'.$registro['id_pais'].' - '.$registro['id_estado'].'</h6></div>
+                                <div class="panel-body">
+                                    <div class="row">         
+                                        <h5><span class="glyphicon glyphicon-star at"></span> '.$registro['atracoes_evento'].'</h5>
+                                        <img src="../assets/_imagens/ny.jpg" class="img-responsive" alt="" style="height: 260px; width: 600px; float: left;">
+                                    </div>
+                                    <div id="texto">
+                                        <span class="glyphicon">&#xe109;</span>'.$registro['data_evento_formatada'].'<br> 
+                                        <span class="glyphicon glyphicon-time"></span>'.$registro['horario_inicio_evento'].' - '.$registro['horario_termino_evento'].'<br>
+                                        Cidade: '.$registro['id_cidade'].'<br>
+                                        <span class="glyphicon">&#xe062;</span>'.$registro['endereco_evento'].'<br>
+                                        Classificação indicativa: '.$registro['classificacao_evento'].'<br>
+                                    </div>
+                                    <div>
+                                        <button type="submit" class="btn">Comprar ingresso <span class="glyphicon">&#xe116;</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <form>
+                                    <div class="linha"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>';}}?>   
                 </div>
-            </div>
             <div class="col-md-3">
                 <div class="profile-content">
                    Some user related content goes here...

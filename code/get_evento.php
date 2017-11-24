@@ -54,30 +54,29 @@
                             <div class="panel panel-success">
                                 <div class="panel-heading" style="background-color: #262626; color: white;">'.$registro['nome_evento'].'<h6>'.$registro['id_pais'].' - '.$registro['id_estado'].'</h6></div>
                                 <div class="panel-body">
-                                    <div class="row">
-                                        
-                                    <h5><span class="glyphicon glyphicon-star at"></span> '.$registro['atracoes_evento'].'</h5>
+                                    <div class="row">         
+                                        <h5><span class="glyphicon glyphicon-star at"></span> '.$registro['atracoes_evento'].'</h5>
                                         <img src="../assets/_imagens/ny.jpg" class="img-responsive" alt="" style="height: 260px; width: 600px; float: left;">
                                     </div>
-                                        <div id="texto">
-                                            <span class="glyphicon">&#xe109;</span>'.$registro['data_evento_formatada'].'<br> 
-                                            <span class="glyphicon glyphicon-time"></span>'.$registro['horario_inicio_evento'].' - '.$registro['horario_termino_evento'].'<br>
-                                            Cidade: '.$registro['id_cidade'].'<br>
-                                            <span class="glyphicon">&#xe062;</span>'.$registro['endereco_evento'].'<br>
-                                            Quantidade de ingressos: '.$registro['quantidade_ingressos'].'<br>
-                                            <span class="glyphicon glyphicon-usd"></span> Preço do ingresso: R$ '.$registro['preco_ingressos'].'<br>
-                                            Classificação indicativa: '.$registro['classificacao_evento'].'<br>
-                                        </div>
-                                    <div >
+                                    <div id="texto">
+                                        <span class="glyphicon">&#xe109;</span>'.$registro['data_evento_formatada'].'<br> 
+                                        <span class="glyphicon glyphicon-time"></span>'.$registro['horario_inicio_evento'].' - '.$registro['horario_termino_evento'].'<br>
+                                        Cidade: '.$registro['id_cidade'].'<br>
+                                        <span class="glyphicon">&#xe062;</span>'.$registro['endereco_evento'].'<br>
+                                        Quantidade de ingressos: '.$registro['quantidade_ingressos'].'<br>
+                                        <span class="glyphicon glyphicon-usd"></span> Preço do ingresso: R$ '.$registro['preco_ingressos'].'<br>
+                                        Classificação indicativa: '.$registro['classificacao_evento'].'<br>
+                                    </div>
+                                    <div>
                                         <button type="submit" class="btn">Comprar ingresso <span class="glyphicon">&#xe116;</span></button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-12">
-                            <form>
-                                <div class="linha"></div>
-                            </form>
-                        </div>
+                                <form>
+                                    <div class="linha"></div>
+                                </form>
+                            </div>
                         </div>
                     </div>               
                     <div class="col-md-3"></div>                   
