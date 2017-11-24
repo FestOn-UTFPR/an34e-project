@@ -60,7 +60,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="">Selecione seu país<a class="a">*</a></label>
-                            <select type="option" id="combo-estado" class="form-control" name="pais" required="requiored">
+                            <select type="option" id="combo-estado" class="form-control" name="pais_evento" required="requiored">
                                 <option selected="selected">Brasil</option> 
                             </select>
                             
@@ -70,7 +70,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="">Selecione seu estado<a class="a">*</a></label>
-                            <select type="option" class="form-control" name="estado" required="requiored"> 
+                            <select type="option" class="form-control" name="estado_evento" required="requiored"> 
                                 <option>Acre</option> 
                                 <option>Alagoas</option> 
                                 <option>Amapá</option> 
@@ -105,7 +105,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="">Digite sua cidade<a class="a">*</a></label>
-                            <input type="text" class="form-control" name="cidade" required="requiored">
+                            <input type="text" class="form-control" name="cidade_evento" required="requiored">
                         </div>
                     </div>
 
