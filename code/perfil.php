@@ -74,7 +74,7 @@
                                 Configurações da conta </a>
                             </li>
                             <li>
-                                <a href="#" target="_blank">
+                                <a href="#">
                                 <i class="glyphicon glyphicon-info-sign"></i>
                                 Informações da conta </a>
                             </li>
