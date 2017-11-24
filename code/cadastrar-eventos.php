@@ -86,7 +86,7 @@
                                 <option>Minas Gerais</option> 
                                 <option>Pará</option> 
                                 <option>Paraíba</option> 
-                                <option selected="selected">Paraná</option> 
+                                <option>Paraná</option> 
                                 <option>Pernambuco</option> 
                                 <option>Piauí</option> 
                                 <option>Rio de Janeiro</option> 
@@ -95,7 +95,7 @@
                                 <option>Rondônia</option> 
                                 <option>Roraima</option> 
                                 <option>Santa Catarina</option> 
-                                <option>São Paulo</option> 
+                                <option selected="selected">São Paulo</option> 
                                 <option>Sergipe</option> 
                                 <option>Tocantins</option>
                             </select>    
