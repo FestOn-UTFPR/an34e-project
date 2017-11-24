@@ -29,3 +29,4 @@ CREATE TABLE CADASTRO_USUARIO(
 	ID_CIDADE VARCHAR(50) NOT NULL,
 	FOTO_USUARIO VARCHAR(100)
 );
+ALTER TABLE `cadastro_evento` ADD `classificacao_evento` INT NOT NULL AFTER `organizador_evento`;

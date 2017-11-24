@@ -9,7 +9,7 @@
 	$pais = $_POST['pais'];
 	$estado = $_POST['estado'];
 	$cidade = $_POST['cidade'];
-	
+
 	$objDB = new db();
 	$link = $objDB -> conecta_mysql();
 
@@ -55,7 +55,25 @@
 	} else{
 		echo 'Erro ao tentar localizar o registro de cidade';
 	}
+	
+	//verifica quantos arquivos estão sendo recebidos na superglobal $)FILES
+	$total_arquivos = count($_FILES['arquivos']['name']);
+	
+	//diretório de upload
+	$diretorio_upload = './uploads/';
 
+	//percorre cada arquivo
+	for ($i=0; $i < $total_arquivos; $i++) {
+				
+		//move o arquivo temporario para o destino
+		$arquivo_upload = $diretorio_upload . basename($_FILES['arquivos']['name'][$i]);
+		if (move_uploaded_file($_FILES['arquivos']['tmp_name'][$i], $arquivo_upload)) {
+			echo "Sucesso<br />";
+		} else {
+			echo "Erro<br />";
+		}
+        
+	}
 
 	if($username_existe || $email_existe || $cidade_existe){
 		$retorno_get = '';
@@ -76,7 +94,7 @@
 		die();
 	}
 
-	$sql = "INSERT INTO cadastro_usuario(username, nome_usuario, data_nascimento, email_usuario, senha_usuario, id_pais, id_estado, id_cidade) VALUES ('$username', '$nome','$data_nascimento','$email','$senha','$pais','$estado', '$cidade')";
+	$sql = "INSERT INTO cadastro_usuario(username, nome_usuario, data_nascimento, email_usuario, senha_usuario, id_pais, id_estado, id_cidade, foto_usuario) VALUES ('$username', '$nome','$data_nascimento','$email','$senha','$pais','$estado', '$cidade', '$total_arquivos')";
 
 	//executar query
 	if(mysqli_query($link, $sql)){
@@ -84,4 +102,5 @@
 	} else{
 		echo 'Erro ao registrar usuário';
 	}
+
 ?>

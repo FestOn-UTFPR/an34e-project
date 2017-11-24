@@ -15,6 +15,17 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="_javascript/init-config.js"></script>
         <link rel="stylesheet" type="text/css" href="_css/css.css">
+        <script type="text/javascript">
+            $(document).ready( function() {
+            
+                // initialize with defaults
+                $("#arquivos").fileinput();
+
+                // with plugin options
+                $("#arquivos").fileinput({'showUpload':false, 'previewFileType':'any'});
+                
+            });
+        </script>
     </head>
     <body>
         <nav class="navbar navbar-inverse bg-inverse nav-feston">
@@ -24,7 +35,7 @@
         <div class="container container-corpo">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-                <form method="post" action="registra_usuario.php" id="formCadastroUsuario">
+                <form enctype="multipart/form-data" method="post" action="registra_usuario.php" id="formCadastroUsuario">
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="">Nome de usuário<a class="a">*</a></label>
@@ -126,9 +137,18 @@
                                 }
                             ?>
                         </div>
-                    </div>    
+                    </div>   
+                    
                     <div class="col-md-12">
-                        <button type="submit" class="btn btn-info" value="Enviar arquivo">Cadastrar Usuário</button> 
+                        <div class="form-group">
+                            <label class="control-label">Selecione os arquivos desejados:</label>
+                            <input id="arquivos" name="arquivos[]" type="file" class="file" multiple data-show-upload="false" data-show-caption="true">
+                            <input type="submit" value="Enviar arquivo" />
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-info"  name="cadastrar" value="Cadastrar">Cadastrar Usuário</button> 
                     </div>
                 </form>
             </div>

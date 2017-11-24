@@ -118,7 +118,7 @@
                     </div> 
                 </form>
             </div>
-            <div class="col-md-3"></div>                   
+            <div class="col-md-3 list-group"></div>                   
         </div>
         <footer id="rodape">
             <div id="footer"></div>
