@@ -1,13 +1,7 @@
 function enviaPagseguro(idGet,precoGet, nomeGet){
 
-	var obj = {
-            "id" = idGet,
-            "nome" = nomeGet,
-            "preco" = precoGet
-            }.serialize();
-
 	$.ajax({
-    data: '',
+    data: {'id':idGet, 'preco': (precoGet).toFixed(2), 'nome': nomeGet},
     url: 'api/pagseguro/pagseguro.php',
     method: 'POST', // or GET
     success: function(data){
@@ -15,15 +9,4 @@ function enviaPagseguro(idGet,precoGet, nomeGet){
 		$('#comprar').submit();
 	}
 });
-
- // 	var obj = {
- //            "id" : idGet,
- //            "nome"  : nomeGet,
- //            "preco" : precoGet
- //            }
-
-	// $.post('/trunk/code/api/pagseguro/pagseguro.php',obj,function(data){
-	// 	$('#code').val(data);
-	// 	$('#comprar').submit();
-	// })
 }

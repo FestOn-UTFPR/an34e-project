@@ -70,7 +70,7 @@
                                         Classificação indicativa: '.$registro['CLASSIFICACAO_EVENTO'].'<br>
                                     </div>
                                     <div>
-                                        <button type="submit" class="btn" onClick="enviaPagseguro()">Comprar ingresso <span class="glyphicon">&#xe116;</span></button>
+                                        <button type="submit" class="btn" onClick="enviaPagseguro('.$registro['ID_EVENTO'].','.$registro['PRECO_INGRESSOS'].',\''.$registro['NOME_EVENTO'].'\')">Comprar ingresso <span class="glyphicon">&#xe116;</span></button>
                                         <!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
                                         <form id="comprar" action="https://pagseguro.uol.com.br/checkout/v2/payment.html" method="post" onsubmit="PagSeguroLightbox(this); return false;">
                                         <!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->

@@ -2,10 +2,10 @@
 $data['token'] ='9BC1EE77BC4143DFA69C09612BFA502B';
 $data['email'] = 'renanlaureano@gmail.com';
 $data['currency'] = 'BRL';
-$data['itemId1'] = '1';
+$data['itemId1'] = $_POST['id'];
 $data['itemQuantity1'] = '1';
-$data['itemDescription1'] = 'Festa'
-$data['itemAmount1'] = $_POST['preco'] + '.00';
+$data['itemDescription1'] = $_POST['nome'];
+$data['itemAmount1'] = $_POST['preco'];
 
 $url = 'https://ws.pagseguro.uol.com.br/v2/checkout';
 
